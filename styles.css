@@ -3,8 +3,8 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .header{
     padding: 80px 120px;
@@ -69,21 +69,22 @@ button{
     margin:100px 200px;
 
  }
+ /* company section */
 .company{
-    
+    text-align: center;
     align-items: center;
     border-top: 1px solid rgb(204, 197, 197);
     border-bottom: 1px solid rgb(204, 197, 197);
     margin:100px 200px;
 }
 .allcompany{
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 20px;
     align-items: center;
 }
 section li{
-    margin-left:60px ;
+    /* margin-left:60px ; */
     list-style: none;
 
 }
@@ -117,13 +118,23 @@ section li{
     margin-bottom: 5px;
     font-size: 24px; 
 }
+/* single section */
+.singlesec{
+    /* position: relative; */
+    margin-top: 40px;
+    text-align: right;
+    margin-right: 200px;
+
+
+}
 .grid-last{
     color:rgba(224, 44, 109, 1) ;
-    font-size: 1rem;
+    font-size: 1.7rem;
     font-weight: 600;
-    margin-top: 50px;
-    text-align: right;
+    text-decoration: none;
 }
+
+/* last section */
 .last-section{
     display: flex;
     justify-content: center;
@@ -141,20 +152,58 @@ section li{
     padding: 45px;
     color: white;
     line-height: 30px;
+    margin-top: 100px;
 }
 
 
  /* mobile divace */
- @media screen and (mix-width: 576px){
-    nav{
-        flex-direction: column;
+
+ @media screen and (max-width: 576px) {
+    .header {
+      padding: 20px 5px;
     }
-
+    nav, .banner ,.last-section{
+      flex-direction: column;
+    }
+    nav li {
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+    nav li a {
+      font-size: 0.9rem; 
+    }
+    .banner,.last-section{
+        text-align: center;
+    }
+    .img{
+        order: -1; 
+        margin: 10px;
+        width: 60%;
+      }
+      main, .company{
+        margin: 0;
+        padding: 0;
+      }
+      .container{
+        grid-template-columns:auto;
+        gap: 10px;
+    }
+    .imglast{
+        order: -2;  
+    }
+    .singlesec{
+        margin-right:5px;
+        text-align: center;
+    }
+    .allcompany{
+        grid-template-columns: auto auto auto auto ;
+        padding: 0; 
+        text-align: center;
+  }
+  .company{
+    margin-bottom:100px;
  }
-
-
-
- /* tablets */
- @media screen and (min-width: 576px) and (max-width: 768px) {
-
- }
+  section li{
+    margin-left:0 ;
+  }
+}
